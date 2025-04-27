@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mqtt-broker
+    env: docker
+    dockerfilePath: ./mqtt-broker/Dockerfile
+    dockerContext: ./mqtt-broker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 1883
+    disk:
+      name: mosquitto-data
+      mountPath: /mosquitto/data
+      sizeGB: 1
