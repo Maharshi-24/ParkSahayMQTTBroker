@@ -12,11 +12,11 @@ This repository contains the configuration for a self-hosted Mosquitto MQTT brok
 - **Node.js Subscriber** (on Render) that listens to messages from broker
 - **Frontend** (Vercel) that hits /status endpoint from the subscriber to show real-time updates
 
-## Directory Structure
+## Files
 
-- `mqtt-broker/`: Contains Docker and Mosquitto configuration files
-  - `Dockerfile`: Configures the Docker image
-  - `mosquitto.conf`: Configuration for the MQTT broker
+- `Dockerfile`: Configures the Docker image based on eclipse-mosquitto:2.0
+- `mosquitto.conf`: Configuration for the MQTT broker
+- `render.yaml`: Configuration for deployment on Render
 
 ## Deployment
 

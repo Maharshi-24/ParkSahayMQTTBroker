@@ -2,8 +2,8 @@ services:
   - type: web
     name: mqtt-broker
     env: docker
-    dockerfilePath: ./mqtt-broker/Dockerfile
-    dockerContext: ./mqtt-broker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     plan: starter
     healthCheckPath: /
     envVars:
